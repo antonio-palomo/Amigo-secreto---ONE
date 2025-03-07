@@ -13,5 +13,5 @@ A segunda forma foi enviar uma mensagem ao usuário quando é colocado o mesmo n
 A terceira forma é avisar o usuário que não é possível sortear amigos sem que haja nenhum amigo adicionado.
 ![image](https://github.com/user-attachments/assets/ee95f511-9717-496d-a092-8df11737d3b1)
 
-
-
+Pagina em questão pode ser acessada por meiocdo link abaixo:
+https://antonio-palomo.github.io/Amigo-secreto---ONE/
