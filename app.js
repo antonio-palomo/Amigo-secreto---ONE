@@ -6,12 +6,12 @@ function adicionarAmigo() { // função para adicionar um amigo a lista
     const nome = amigos_input.value.trim();
     
     if (nome === "") {
-        alert("Por favor, insira um nome válido.");
+        alert("Por favor, insira um nome válido. O nome deve conter ao menos um caractere ou número para ser aceito");
         return;
     }
     
     if (amigos.includes(nome)) {
-        alert("Esse nome já foi adicionado.");
+        alert("hmm... Parece que esse nome já foi adicionado tente colocar um outro ou adicionar o sobrenome da pessoa que quer sortear.");
         return;
     }
     
@@ -20,7 +20,7 @@ function adicionarAmigo() { // função para adicionar um amigo a lista
     atualizarLista();
 }
 
-function atualizarLista() { // função para atualixzar os valores na lista
+function atualizarLista() { // função para atualizar os valores na lista
     const lista = document.getElementById("listaAmigos");
     lista.innerHTML = "";
     
@@ -29,18 +29,18 @@ function atualizarLista() { // função para atualixzar os valores na lista
         li.textContent = amigo;
         li.style.padding = "10px";
         li.style.margin = "5px";
-        li.style.border = "1px solid #000";
-        li.style.borderRadius = "5px";
-        li.style.backgroundColor = "#FFF";
         li.style.textAlign = "center";
         li.style.fontFamily = "Inter, sans-serif";
+        li.style.fontSize = "18px";
+        li.style.fontWeight = "bold";
+        
         lista.appendChild(li);
     });
 }
-
+  
 function sortearAmigo() { // função para sortear o amigo
     if (amigos.length === 0) {
-        alert("Adicione pelo menos um amigo antes de sortear.");
+        alert("Por favor adicione pelo menos o nome de um amigo antes de sortear.");
         return;
     }
     
@@ -50,7 +50,7 @@ function sortearAmigo() { // função para sortear o amigo
     atualizarLista();
     
     const resultado = document.getElementById("resultado");
-    resultado.innerHTML = `<li style="padding: 10px; margin-top: 10px; font-size: 20px; color: green; font-weight: bold;">Foi sorteado: <strong>${sorteado}</strong> 🎉</li>`;
+    resultado.innerHTML = `<li style="padding: 10px; margin-top: 10px; font-size: 22px; color:rgba(67, 16, 251, 0.88); font-weight: bold; list-style-type: none;">Parabéns!! Seu(Sua) amigo(a) secreto(a) é: <strong>${sorteado}</strong> </li>`;
 }
 
 function limparLista() { // função para limpar os usuários da lista
